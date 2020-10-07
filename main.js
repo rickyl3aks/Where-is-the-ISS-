@@ -1,8 +1,7 @@
 const api = "https://api.wheretheiss.at/v1/satellites/25544";
 const mymap = L.map("issMap").setView([51.5074, -0.1278], 13);
 const issIcon = L.icon({
-  iconUrl:
-    "https://p7.hiclipart.com/preview/938/800/6/international-space-station-outer-space-spacecraft-clip-art-cliparts-space-station.jpg",
+  iconUrl: "images/iss.png",
   iconSize: [50, 32],
   iconAnchor: [25, 16],
 });
