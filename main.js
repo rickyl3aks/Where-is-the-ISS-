@@ -6,11 +6,15 @@ const issIcon = L.icon({
   iconAnchor: [25, 16],
 });
 const marker = L.marker([0, 0], { icon: issIcon }).addTo(mymap);
-const attribution =
-  'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
-const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-const title = L.tileLayer(tileUrl, { attribution });
-title.addTo(mymap);
+L.tileLayer(
+  "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}",
+  {
+    attribution:
+      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    accessToken:
+      "pk.eyJ1IjoiY29uc28iLCJhIjoiY2tmNXRoZnV0MDNxZjJxbzNwcXlzZDF6MyJ9.a4PvuIOzeOJa8ogQrXAyRA",
+  }
+).addTo(mymap);
 let firstTime = true;
 
 async function getISS() {
