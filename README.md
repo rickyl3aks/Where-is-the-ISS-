@@ -1,5 +1,4 @@
-Where is the ISS?
+Icon representing the international space shuttle🌎 🌌 going around the screen inside a map</br>
+Map made with LEAFLETjs
 
-🚀 🌎 🌌
-Working with the NASA API and leaflet for the map
-🌌 🌎 🚀
+Fetching data from NASA🚀 API to know latitude and longitude
